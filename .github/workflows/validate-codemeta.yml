@@ -1,0 +1,35 @@
+name: Validate codemeta.json
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "codemeta.json"
+      - "codemeta.generated.json"
+  pull_request:
+    paths:
+      - "codemeta.json"
+      - "codemeta.generated.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install codemetapy
+        run: pip install codemetapy
+
+      - name: Validate codemeta.json is well-formed JSON-LD
+        run: |
+          for f in codemeta.json codemeta.generated.json; do
+            if [ -f "$f" ]; then
+              echo "Validating $f"
+              python -c "import json,sys; json.load(open('$f'))" || exit 1
+              codemetapy --validate "$f"
+            fi
+          done

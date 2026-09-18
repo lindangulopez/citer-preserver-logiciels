@@ -1,0 +1,33 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Citer et préserver des codes et logiciels avec SWHID et CodeMeta",
+  "description": "Worked example repository pairing a plain GitHub Pages site with a real QGIS project (Greater Côa Valley rewilding species monitoring) for the 2026-10-15 webinar on describing, preserving, identifying and citing research software with CodeMeta, Software Heritage and SWHID. Adapted from the RSECon26 workshop 'Making Research Software FAIR with CodeMeta'.",
+  "codeRepository": "https://github.com/lindangulopez/citer-preserver-logiciels",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": "HTML",
+  "runtimePlatform": "QGIS 3.34",
+  "keywords": [
+    "GIS",
+    "QGIS",
+    "rewilding",
+    "ecological connectivity",
+    "SWHID",
+    "Software Heritage",
+    "CodeMeta",
+    "open science",
+    "research software citation"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Linda",
+      "familyName": "Angulo Lopez"
+    }
+  ],
+  "isBasedOn": "https://github.com/oeg-upm/rsecon26-codemeta",
+  "relatedLink": [
+    "https://github.com/oeg-upm/rsecon26-codemeta"
+  ],
+  "_comment": "This is the worked-example answer key attendees compare their own SOMEF-generated codemeta.json against (see exercises/generate-codemeta.md). Regenerate/validate with SOMEF, the CodeMeta Generator (https://codemeta.github.io/codemeta-generator/), or codemetapy before the live session. Note: CodeMeta has no dedicated field for 'a QGIS project as data/config bundled with the software' — runtimePlatform is used here as the closest fit, which is itself a useful discussion point in Part 2 of the webinar (see docs/guided-demo.md)."
+}

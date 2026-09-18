@@ -1,47 +1,39 @@
-# Making Research Software FAIR with CodeMeta
+# Citer et préserver des codes et logiciels avec SWHID et CodeMeta
 
-Mini-site for the **RSECon26 workshop** “Making Research Software FAIR with CodeMeta”.
+Site pour le webinaire du **15 octobre 2026** « Citer et préserver des codes et logiciels avec SWHID et CodeMeta », destiné aux ingénieur·e·s et chargé·e·s de données / développement (BAP D & E).
 
-The site is intentionally built with plain HTML and CSS so that it can be published directly with **GitHub Pages** and edited easily by workshop organisers.
+Le site est volontairement construit en HTML et CSS simples afin d'être publié directement avec **GitHub Pages** et facilement modifiable.
 
-## Workshop structure
+Ce dépôt est adapté de [oeg-upm/rsecon26-codemeta](https://github.com/oeg-upm/rsecon26-codemeta) (MIT, Ontology Engineering Group – UPM), l'atelier CodeMeta donné récemment à RSECon26, dont il reprend l'approche GitHub Actions pour la production de métadonnées.
 
-The workshop is a **180-minute interactive session** combining short presentations, live demonstrations, discussions, and hands-on activities.
+## Objectif
 
-| Duration | Session |
+Comprendre comment rendre les codes et logiciels de recherche décrits, préservables, identifiables, citables et reproductibles, dans une démarche de science ouverte — en suivant un cas concret : un dépôt GitHub contenant un projet QGIS.
+
+L'objectif n'est pas seulement de générer un `codemeta.json` ou de récupérer un SWHID, mais de comprendre comment ces éléments s'articulent dans un même workflow de recherche.
+
+## Déroulé (2h)
+
+| Durée | Séquence |
 | ---: | --- |
-| **5 min** | **Welcome**|
-| **10 min** | **Introduction to FAIR research software (Software Heritage) and CodeMeta** — |
-| **20 min** | **Demonstration of the CodeMeta tool ecosystem** — GitHub Actions, CFF conversions, AutoCodeMeta, metadata quality assurance, and related tools|
-|  | Show dashboards of the OSPO project and software catalogue, if available. |
-| **15 min** | **Discussion on tools for CodeMeta generation** |
-| **40 min** | **Hands-on exercise 1 — Generating your own CodeMeta file** |
-|  | Generate `codemeta.json`. |
-|  | Detect metadata pitfalls. |
-|  | Implement GitHub Actions. |
-|  | Archive software using the CodeMeta file and repository into Software Heritage. |
-|  | Collect participant feedback. |
-| **20 min** | **Break** |
-| **15 min** | **Introduction to mappings and mapping methodology**  |
-|  | Introduction to the use of LLMs for metadata mappings. |
-| **40 min** | **Hands-on exercise 2 — Bring your schema: mapping metadata from other schemas into CodeMeta** |
-|  | Participants will be divided into groups. |
-|  | Select a source schema and approximately 8–12 representative properties. |
-|  | Understand the semantics, expected values/types, cardinality, and examples of the selected properties. |
-|  | Find possible CodeMeta correspondences and classify the mappings. |
-|  | Identify mappings requiring transformations, ambiguous mappings, and properties without a satisfactory CodeMeta correspondence. |
-|  | Investigate 2–3 difficult cases, optionally using an LLM, and compare its recommendations with the group's decisions. |
-|  | Each group presents one interesting or problematic mapping for discussion. |
-| **15 min** | **Wrap-up and discussion** |
+| **15–20 min** | **1. Pourquoi préserver et citer les logiciels de recherche ?** — le logiciel comme résultat de recherche, reproductibilité et attribution, la troisième feuille de route française pour la science ouverte, introduction à Software Heritage et au SWHID. |
+| **45–50 min** | **2. Décrire son logiciel avec CodeMeta : du dépôt aux métadonnées** — qu'est-ce que CodeMeta, mise en pratique sur ce dépôt et le projet QGIS, création d'un `codemeta.json`, automatisation avec GitHub Actions, bonnes pratiques. |
+| **30–35 min** | **3. Préserver et identifier avec Software Heritage et SWHID** — archivage dans Software Heritage, récupération et lecture d'un SWHID, complémentarité entre CodeMeta et l'archivage/identification SWH. |
+| **20–25 min** | **4. De la préservation à la citation** — workflows de citation avec Zenodo et HAL, HAL comme exemple pertinent pour le contexte français (curation par les bibliothécaires) sans en faire le focus, lien entre dépôt, métadonnées, identifiants et publication. |
 
-## Acknowledgements
+La session est présentée en démonstration guidée, mais ce dépôt est documenté pour que chaque participant·e puisse le forker et refaire l'ensemble du parcours seul·e — voir [docs/getting-started.md](docs/getting-started.md) et [notebooks/tutorial.ipynb](notebooks/tutorial.ipynb).
 
-The workshop materials acknowledge the following projects:
+## Contenu du dépôt
 
-OSCARS, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101129751.
+- [`qgis/`](qgis/) — le projet QGIS utilisé comme fil rouge (connectivité écologique, Vallée du Côa), rendu autonome (données incluses).
+- [`data/`](data/) — les données référencées par le projet QGIS.
+- [`codemeta.json`](codemeta.json) — exemple de métadonnées CodeMeta pour ce dépôt.
+- [`.github/workflows/`](.github/workflows/) — automatisation de la génération et de la validation du `codemeta.json`.
+- [`exercises/generate-codemeta.md`](exercises/generate-codemeta.md) — l'exercice guidé de génération de CodeMeta, adapté de RSECon26.
+- [`docs/guided-demo.md`](docs/guided-demo.md) — le parcours complet : décrire → archiver → identifier → citer.
+- [`docs/getting-started.md`](docs/getting-started.md) — check-list pour compléter le parcours seul·e après le webinaire.
+- [`notebooks/tutorial.ipynb`](notebooks/tutorial.ipynb) — version exécutable du parcours (PyQGIS, métadonnées QGIS, CodeMeta, SWHID, citation).
 
-EVERSE, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101129744.
+## Remerciements
 
-OSTRAILS, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101130187.
-
-FAIR2ADAPT, which has received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement No. 101188256.
+Les sections « Exercise 1 » et l'automatisation GitHub Actions reprennent et adaptent des éléments de l'atelier [Making Research Software FAIR with CodeMeta](https://github.com/oeg-upm/rsecon26-codemeta) donné à RSECon26 par l'Ontology Engineering Group (UPM).

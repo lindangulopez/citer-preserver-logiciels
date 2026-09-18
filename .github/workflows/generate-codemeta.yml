@@ -1,0 +1,50 @@
+name: Generate codemeta.json with SOMEF
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths-ignore:
+      - "codemeta.generated.json"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-codemeta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install SOMEF
+        run: pip install somef
+
+      - name: Configure SOMEF (first run only)
+        run: somef configure -g "${{ secrets.SOMEF_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}" -a
+
+      - name: Generate codemeta.generated.json
+        # Check the current SOMEF CLI flags (`somef describe --help`) before relying on this in
+        # a live session — SOMEF's options have changed across releases. `-c` requests CodeMeta
+        # output, `-t` is the confidence threshold for included metadata.
+        run: |
+          somef describe -r "https://github.com/${{ github.repository }}" \
+            -o codemeta.generated.json -t 0.8 -c
+
+      # codemeta.json at the repo root is the hand-curated worked example (the "answer key"
+      # attendees compare their own output against) — this workflow never overwrites it.
+      # It only produces/updates codemeta.generated.json so the diff stays visible.
+      - name: Show diff against the worked example
+        run: diff -u codemeta.json codemeta.generated.json || true
+
+      - name: Commit generated metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet -- codemeta.generated.json || \
+            (git add codemeta.generated.json && \
+             git commit -m "chore: update codemeta.generated.json via SOMEF [skip ci]" && \
+             git push)
