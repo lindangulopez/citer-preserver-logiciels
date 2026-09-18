@@ -32,7 +32,7 @@ La session est présentée en démonstration guidée, mais ce dépôt est docume
 - [`exercises/generate-codemeta.md`](exercises/generate-codemeta.md) — l'exercice guidé de génération de CodeMeta, adapté de RSECon26.
 - [`docs/guided-demo.md`](docs/guided-demo.md) — le parcours complet : décrire → archiver → identifier → citer.
 - [`docs/getting-started.md`](docs/getting-started.md) — check-list pour compléter le parcours seul·e après le webinaire.
-- [`notebooks/tutorial.ipynb`](notebooks/tutorial.ipynb) — version exécutable du parcours (PyQGIS, métadonnées QGIS, CodeMeta, SWHID, citation).
+- [`notebooks/tutorial.ipynb`](notebooks/tutorial.ipynb) — version exécutable du parcours (PyQGIS, métadonnées QGIS, CodeMeta, SWHID, citation). Voir [`notebooks/tutorial.executed-example.ipynb`](notebooks/tutorial.executed-example.ipynb) pour une exécution de référence avec les sorties.
 
 ## Remerciements
 
