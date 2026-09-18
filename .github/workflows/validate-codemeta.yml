@@ -25,11 +25,15 @@ jobs:
         run: pip install codemetapy
 
       - name: Validate codemeta.json is well-formed JSON-LD
+        # codemetapy's `-i json <file>` parses the file as JSON-LD and re-serializes it,
+        # failing (non-zero exit) if it doesn't conform to CodeMeta's schema.org-based model.
+        # Note: `--validate` is NOT a boolean flag — it takes a SHACL shape file to check
+        # against, which we don't have here, so we don't use it.
         run: |
           for f in codemeta.json codemeta.generated.json; do
             if [ -f "$f" ]; then
               echo "Validating $f"
               python -c "import json,sys; json.load(open('$f'))" || exit 1
-              codemetapy --validate "$f"
+              codemetapy -i json "$f" -O "/tmp/$(basename "$f").validated"
             fi
           done
