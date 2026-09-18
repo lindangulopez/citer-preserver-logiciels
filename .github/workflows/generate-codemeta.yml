@@ -24,15 +24,23 @@ jobs:
         run: pip install somef
 
       - name: Configure SOMEF (first run only)
-        run: somef configure -g "${{ secrets.SOMEF_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}" -a
+        # `somef configure` only exposes -a/--auto and -b/--base_uri on the CLI (verified
+        # against somef 0.11.3 --help) — there is no CLI flag to pass a GitHub token here;
+        # `--auto` just sets up the default classifier-model paths. The token instead goes
+        # directly on `somef describe` below via --github-token.
+        run: somef configure --auto
 
       - name: Generate codemeta.generated.json
-        # Check the current SOMEF CLI flags (`somef describe --help`) before relying on this in
-        # a live session — SOMEF's options have changed across releases. `-c` requests CodeMeta
-        # output, `-t` is the confidence threshold for included metadata.
+        # Verified against `somef describe --help` (0.11.3): -c/--codemeta_out is the CodeMeta
+        # output path (takes an argument — it is NOT a boolean flag, unlike an earlier version
+        # of this workflow assumed). -t is the required confidence threshold. --github-token
+        # authenticates GitHub API calls with the run's own token (4997/5000 requests seen in
+        # testing) rather than the ~60/hour unauthenticated limit.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           somef describe -r "https://github.com/${{ github.repository }}" \
-            -o codemeta.generated.json -t 0.8 -c
+            -c codemeta.generated.json -t 0.8 -p --github-token "$GH_TOKEN"
 
       # codemeta.json at the repo root is the hand-curated worked example (the "answer key"
       # attendees compare their own output against) — this workflow never overwrites it.
