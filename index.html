@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RSECon26 workshop: Making Research Software FAIR with CodeMeta">
-  <title>Making Research Software FAIR with CodeMeta | RSECon26</title>
+  <meta name="description" content="Webinaire du 15 octobre 2026 : Citer et préserver des codes et logiciels avec SWHID et CodeMeta">
+  <title>Citer et préserver des codes et logiciels avec SWHID et CodeMeta</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="hero">
     <nav class="nav container">
-      <a class="brand" href="#top">CodeMeta × RSECon26</a>
+      <a class="brand" href="#top">SWHID × CodeMeta</a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#exercises">Exercises</a>
-        <a href="#prepare">Prepare</a>
-        <a href="#resources">Resources</a>
+        <a href="#about">À propos</a>
+        <a href="#agenda">Programme</a>
+        <a href="#exercises">Mise en pratique</a>
+        <a href="#prepare">Se préparer</a>
+        <a href="#resources">Ressources</a>
       </div>
     </nav>
 
     <div id="top" class="hero-content container">
-      <p class="eyebrow">RSECon26 Workshop</p>
-      <h1>Making Research Software FAIR with CodeMeta</h1>
+      <p class="eyebrow">Webinaire · 15 octobre 2026</p>
+      <h1>Citer et préserver des codes et logiciels avec SWHID et CodeMeta</h1>
       <p class="lead">
-        An interactive workshop on generating, improving and mapping research software
-        metadata using CodeMeta.
+        Une démonstration guidée, à partir d'un cas concret — un dépôt GitHub contenant un
+        projet QGIS — pour comprendre comment décrire, préserver, identifier et citer un
+        logiciel de recherche.
       </p>
       <div class="actions">
-        <a class="button primary" href="#agenda">View agenda</a>
-        <a class="button secondary" href="#exercises">Start the exercises</a>
+        <a class="button primary" href="#agenda">Voir le programme</a>
+        <a class="button secondary" href="docs/getting-started.md">Refaire le parcours seul·e</a>
       </div>
       <div class="meta-grid">
-        <div><span>Format</span><strong>Interactive · Hybrid</strong></div>
-        <div><span>Duration</span><strong>180 minutes</strong></div>
-        <div><span>Audience</span><strong>Researchers · RSEs · Developers</strong></div>
-        <div><span>Level</span><strong>Beginner friendly</strong></div>
+        <div><span>Format</span><strong>Démonstration guidée</strong></div>
+        <div><span>Durée</span><strong>2 heures</strong></div>
+        <div><span>Public</span><strong>Ingénieur·e·s &amp; chargé·e·s de données (BAP D &amp; E)</strong></div>
+        <div><span>Niveau</span><strong>Accessible aux débutant·e·s</strong></div>
       </div>
     </div>
   </header>
@@ -43,33 +44,34 @@
   <main>
     <section id="about" class="section container">
       <div class="section-heading">
-        <p class="eyebrow">About the workshop</p>
-        <h2>From fragmented metadata to interoperable research software descriptions</h2>
+        <p class="eyebrow">À propos</p>
+        <h2>Le logiciel comme résultat de recherche à part entière</h2>
       </div>
       <div class="two-column">
         <div>
           <p>
-            Research software metadata is often fragmented across formats, making software
-            harder to discover, cite and reuse. CodeMeta provides a standardized,
-            machine-readable vocabulary based on JSON-LD and Schema.org that can act as a
-            metadata exchange layer across software repositories and tools.
+            La nouvelle <strong>stratégie française pour la science ouverte 2026–2033</strong>
+            reconnaît désormais explicitement le logiciel comme une composante de
+            l'infrastructure de la science ouverte, avec un soutien à
+            <a href="https://www.softwareheritage.org/" target="_blank" rel="noopener">Software Heritage</a>
+            et la recommandation du <strong>SWHID</strong> comme identifiant pérenne pour les logiciels.
           </p>
           <p>
-            In this workshop, participants will combine short introductions, demonstrations
-            and hands-on activities. You will generate CodeMeta metadata for research
-            software, identify common metadata problems and experiment with structured
-            mappings between other metadata schemas and CodeMeta.
+            Si l'on veut pouvoir réutiliser, vérifier, reproduire un logiciel et lui attribuer
+            du crédit, il faut pouvoir le <strong>décrire</strong> (CodeMeta), le
+            <strong>préserver</strong> et l'<strong>identifier</strong> (Software Heritage, SWHID),
+            puis le <strong>citer</strong> (Zenodo, HAL). Ce webinaire parcourt cette chaîne
+            complète sur un cas concret plutôt que de présenter chaque outil isolément.
           </p>
         </div>
         <div class="card accent-card">
-          <h3>You will learn to</h3>
+          <h3>À l'issue de la session, vous saurez</h3>
           <ul>
-            <li>Understand the CodeMeta schema and its core concepts.</li>
-            <li>Generate <code>codemeta.json</code> using automated tools.</li>
-            <li>Improve software metadata by detecting common pitfalls.</li>
-            <li>Map metadata from other schemas into CodeMeta.</li>
-            <li>Assess ambiguous mappings and possible information loss.</li>
-            <li>Explore LLM-assisted approaches for difficult mapping cases.</li>
+            <li>Situer le logiciel de recherche dans la démarche de science ouverte.</li>
+            <li>Décrire un logiciel avec CodeMeta et produire un <code>codemeta.json</code>.</li>
+            <li>Automatiser la production de métadonnées avec GitHub Actions.</li>
+            <li>Archiver un dépôt dans Software Heritage et lire un SWHID.</li>
+            <li>Relier dépôt, métadonnées, identifiants et publication (Zenodo, HAL).</li>
           </ul>
         </div>
       </div>
@@ -78,72 +80,66 @@
     <section id="agenda" class="section section-alt">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Agenda</p>
-          <h2>Three hours of practical FAIR research software work</h2>
+          <p class="eyebrow">Programme</p>
+          <h2>Deux heures, du dépôt de code au logiciel citable</h2>
         </div>
         <div class="agenda">
-          <div class="agenda-item"><time>5 min</time><div><h3>Welcome</h3><p>Introduction to the workshop and its goals.</p></div></div>
-          <div class="agenda-item"><time>10 min</time><div><h3>FAIR research software &amp; CodeMeta</h3><p>Why software metadata matters and where CodeMeta fits.</p></div></div>
-          <div class="agenda-item"><time>20 min</time><div><h3>The CodeMeta tool ecosystem</h3><p>GitHub Actions, CFF conversion, AutoCodeMeta, metadata quality assurance and related tools.</p></div></div>
-          <div class="agenda-item"><time>15 min</time><div><h3>Discussion: generating CodeMeta</h3><p>Compare workflows and tools for different kinds of repositories.</p></div></div>
-          <div class="agenda-item highlight"><time>40 min</time><div><h3>Hands-on 1 · Generate and improve your CodeMeta</h3><p>Create a CodeMeta file, detect pitfalls and explore automation and archiving workflows.</p></div></div>
-          <div class="agenda-item break"><time>20 min</time><div><h3>Break</h3></div></div>
-          <div class="agenda-item"><time>15 min</time><div><h3>Metadata mappings &amp; methodology</h3><p>Crosswalks, mapping decisions, transformations, information loss and LLM-assisted mapping.</p></div></div>
-          <div class="agenda-item highlight"><time>40 min</time><div><h3>Hands-on 2 · Map your schema to CodeMeta</h3><p>Work in groups to map a representative subset of properties and justify difficult decisions.</p></div></div>
-          <div class="agenda-item"><time>15 min</time><div><h3>Wrap-up &amp; discussion</h3><p>Share difficult cases, lessons learned and possible next steps.</p></div></div>
+          <div class="agenda-item"><time>15–20 min</time><div><h3>1. Pourquoi préserver et citer les logiciels de recherche ?</h3><p>Le logiciel comme résultat de recherche, reproductibilité et attribution, la 3<sup>e</sup> feuille de route française pour la science ouverte, introduction à Software Heritage et au SWHID.</p></div></div>
+          <div class="agenda-item highlight"><time>45–50 min</time><div><h3>2. Décrire son logiciel avec CodeMeta</h3><p>Qu'est-ce que CodeMeta, mise en pratique sur ce dépôt et le <a href="qgis/">projet QGIS</a>, création d'un <code>codemeta.json</code>, automatisation avec GitHub Actions, bonnes pratiques.</p></div></div>
+          <div class="agenda-item"><time>30–35 min</time><div><h3>3. Préserver et identifier avec Software Heritage et SWHID</h3><p>Archivage d'un dépôt, récupération et lecture d'un SWHID, complémentarité entre CodeMeta et l'archivage/identification SWH.</p></div></div>
+          <div class="agenda-item"><time>20–25 min</time><div><h3>4. De la préservation à la citation</h3><p>Workflows de citation avec Zenodo et HAL — HAL comme exemple pertinent pour le contexte français, sans en faire le focus — lien entre dépôt, métadonnées, identifiants et publication.</p></div></div>
         </div>
       </div>
     </section>
 
     <section id="exercises" class="section container">
       <div class="section-heading">
-        <p class="eyebrow">Hands-on</p>
-        <h2>Two exercises, two reusable outputs</h2>
+        <p class="eyebrow">Mise en pratique</p>
+        <h2>Un fil rouge : le projet QGIS</h2>
       </div>
       <div class="cards">
         <article class="card exercise-card">
-          <span class="tag">Exercise 1 · 40 min</span>
-          <h3>Generate and improve your CodeMeta</h3>
+          <span class="tag">Partie 2 · CodeMeta</span>
+          <h3>Générer et améliorer le CodeMeta</h3>
           <p>
-            Generate a <code>codemeta.json</code> file for your own research software or a
-            sample repository, inspect metadata quality and experiment with automation.
+            Générer un <code>codemeta.json</code> pour ce dépôt et le projet QGIS, détecter les
+            pitfalls, automatiser avec GitHub Actions, archiver dans Software Heritage.
           </p>
           <ul>
-            <li>Generate CodeMeta metadata.</li>
-            <li>Detect common pitfalls.</li>
-            <li>Explore GitHub Actions.</li>
-            <li>Archive software using repository metadata and Software Heritage.</li>
+            <li>Générer les métadonnées CodeMeta.</li>
+            <li>Détecter les pitfalls courants.</li>
+            <li>Mettre en place les GitHub Actions.</li>
+            <li>Archiver le logiciel avec Software Heritage.</li>
           </ul>
-          <a class="text-link" href="exercises/generate-codemeta.md">Open exercise →</a>
+          <a class="text-link" href="exercises/generate-codemeta.md">Ouvrir l'exercice →</a>
         </article>
 
         <article class="card exercise-card">
-          <span class="tag">Exercise 2 · 40 min</span>
-          <h3>Map your metadata schema to CodeMeta</h3>
+          <span class="tag">Parcours complet · autonome</span>
+          <h3>Refaire tout le parcours seul·e</h3>
           <p>
-            Select a schema, examine 8–12 representative properties and create a justified
-            crosswalk to CodeMeta.
+            Le guide et le notebook couvrent l'ensemble de la chaîne : décrire, préserver,
+            identifier, citer — sur votre propre fork.
           </p>
           <ul>
-            <li>Compare semantics, not just property names.</li>
-            <li>Classify straightforward and difficult mappings.</li>
-            <li>Record transformations and information loss.</li>
-            <li>Compare selected decisions with an LLM recommendation.</li>
+            <li>Guide détaillé pas à pas.</li>
+            <li>Notebook exécutable (PyQGIS, CodeMeta, SWHID).</li>
+            <li>Check-list de complétion.</li>
           </ul>
-          <a class="text-link" href="exercises/mapping-exercise.md">Open exercise →</a>
+          <a class="text-link" href="docs/guided-demo.md">Ouvrir le guide →</a>
         </article>
       </div>
 
       <div class="workflow">
-        <h3>Mapping workflow</h3>
+        <h3>De la préservation à la citation</h3>
         <div class="workflow-grid">
-          <span>Select schema</span><span>Select properties</span><span>Understand semantics</span>
-          <span>Find CodeMeta candidates</span><span>Compare definitions</span><span>Classify mapping</span>
-          <span>Identify transformations</span><span>Document &amp; justify</span>
+          <span>Dépôt de code</span><span>codemeta.json</span><span>Archive Software Heritage</span>
+          <span>SWHID</span><span>Enregistrement Zenodo / HAL</span><span>Citation</span>
         </div>
         <p class="note">
-          <strong>Key rule:</strong> do not map properties only because their names look similar.
-          Compare definitions, expected values, types, cardinality and examples.
+          <strong>Point clé :</strong> CodeMeta décrit le logiciel, Software Heritage le
+          préserve et l'identifie précisément (SWHID), Zenodo/HAL le rendent citable —
+          ce sont trois briques complémentaires d'un même workflow, pas trois outils isolés.
         </p>
       </div>
     </section>
@@ -151,57 +147,55 @@
     <section id="prepare" class="section section-alt">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Before the workshop</p>
-          <h2>What to bring</h2>
+          <p class="eyebrow">Avant le webinaire</p>
+          <h2>Ce qu'il faut préparer</h2>
         </div>
         <div class="cards three">
           <div class="card">
-            <h3>Required</h3>
-            <p>A laptop with Internet access.</p>
+            <h3>Requis</h3>
+            <p>Un ordinateur avec accès à Internet.</p>
           </div>
           <div class="card">
-            <h3>Recommended</h3>
-            <p>A GitHub account and a research software repository you can use during the exercises.</p>
+            <h3>Recommandé</h3>
+            <p>Un compte GitHub et, pour le parcours autonome, QGIS installé (voir <a href="data/README.md">data/README.md</a> pour la version).</p>
           </div>
           <div class="card">
-            <h3>Optional</h3>
-            <p>A metadata schema that you would like to map into CodeMeta during the second exercise.</p>
+            <h3>Optionnel</h3>
+            <p>Un dépôt logiciel personnel que vous souhaiteriez décrire et archiver.</p>
           </div>
         </div>
         <p class="note">
-          No prior knowledge of CodeMeta or metadata standards is required. The workshop is
-          designed to be accessible to beginners while also including advanced mapping and
-          LLM-assisted topics.
+          Aucune connaissance préalable de CodeMeta, SWHID ou Software Heritage n'est requise.
         </p>
       </div>
     </section>
 
     <section id="resources" class="section container">
       <div class="section-heading">
-        <p class="eyebrow">Tools &amp; resources</p>
-        <h2>Useful during the session</h2>
+        <p class="eyebrow">Outils &amp; ressources</p>
+        <h2>Utiles pendant la session</h2>
       </div>
       <div class="resource-grid">
         <a class="resource-card" href="https://codemeta.github.io/" target="_blank" rel="noopener">
-          <strong>CodeMeta</strong><span>Vocabulary and project documentation</span>
+          <strong>CodeMeta</strong><span>Vocabulaire et documentation du projet</span>
         </a>
-        <a class="resource-card" href="https://autocodemeta.linkeddata.es/" target="_blank" rel="noopener">
-          <strong>AutoCodeMeta</strong><span>Generate CodeMeta metadata</span>
+        <a class="resource-card" href="https://archive.softwareheritage.org/save/" target="_blank" rel="noopener">
+          <strong>Software Heritage — Save code now</strong><span>Archiver un dépôt</span>
         </a>
-        <a class="resource-card" href="https://github.com/SoftwareUnderstanding/RsMetaCheck" target="_blank" rel="noopener">
-          <strong>RSMetaCheck</strong><span>Research software metadata checks</span>
+        <a class="resource-card" href="https://www.swhid.org/" target="_blank" rel="noopener">
+          <strong>SWHID</strong><span>Identifiants pérennes pour le logiciel</span>
         </a>
-        <a class="resource-card" href="https://github.com/SoftwareUnderstanding/sw-metadata-bot" target="_blank" rel="noopener">
-          <strong>sw-metadata-bot</strong><span>Automated metadata feedback</span>
+        <a class="resource-card" href="https://zenodo.org/" target="_blank" rel="noopener">
+          <strong>Zenodo</strong><span>Dépôt et DOI pour la citation</span>
         </a>
-        <a class="resource-card" href="https://www.softwareheritage.org/" target="_blank" rel="noopener">
-          <strong>Software Heritage</strong><span>Software preservation and archiving</span>
+        <a class="resource-card" href="https://hal.science/" target="_blank" rel="noopener">
+          <strong>HAL</strong><span>Archive ouverte française</span>
         </a>
-        <a class="resource-card" href="resources/mapping-template.csv">
-          <strong>Mapping template</strong><span>CSV template for Exercise 2</span>
+        <a class="resource-card" href="qgis/">
+          <strong>Projet QGIS</strong><span>Le cas concret utilisé comme fil rouge</span>
         </a>
-        <a class="resource-card" href="resources/llm-mapping-prompt.md">
-          <strong>LLM mapping prompt</strong><span>Common prompt for uncertain mappings</span>
+        <a class="resource-card" href="notebooks/tutorial.ipynb">
+          <strong>Notebook du parcours</strong><span>Version exécutable, pas à pas</span>
         </a>
       </div>
     </section>
@@ -209,19 +203,19 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Expected outcomes</p>
-          <h2>What participants should leave with</h2>
+          <p class="eyebrow">À l'issue du webinaire</p>
+          <h2>Ce que les participant·e·s repartent avec</h2>
         </div>
         <div class="two-column">
           <ul class="check-list">
-            <li>A CodeMeta file for their own software or a sample project.</li>
-            <li>A practical workflow for metadata generation and integration.</li>
-            <li>A better understanding of CodeMeta and FAIR research software.</li>
+            <li>Un <code>codemeta.json</code> décrivant leur propre logiciel ou un projet d'exemple.</li>
+            <li>Un workflow reproductible de génération et de mise à jour des métadonnées.</li>
+            <li>Une compréhension claire de la complémentarité CodeMeta / Software Heritage / SWHID.</li>
           </ul>
           <ul class="check-list">
-            <li>A documented CodeMeta crosswalk for a representative set of properties.</li>
-            <li>Experience identifying transformations, ambiguity and information loss.</li>
-            <li>Experience critically evaluating LLM-assisted metadata mappings.</li>
+            <li>Un dépôt archivé dans Software Heritage et son SWHID.</li>
+            <li>Une vision d'ensemble des workflows de citation (Zenodo, HAL).</li>
+            <li>La capacité à refaire seul·e l'ensemble du parcours sur leur propre fork.</li>
           </ul>
         </div>
       </div>
@@ -229,80 +223,27 @@
 
     <section class="section container">
       <div class="section-heading">
-        <p class="eyebrow">Acknowledgements</p>
-        <h2>Supported by European research projects</h2>
+        <p class="eyebrow">Remerciements</p>
+        <h2>Matériel adapté de RSECon26</h2>
         <p>
-          This workshop builds on activities and results developed in European initiatives
-          working on Open Science, research software quality, FAIR assessment,
-          interoperability and FAIR Digital Objects.
+          L'exercice CodeMeta et l'automatisation GitHub Actions reprennent et adaptent des
+          éléments de l'atelier
+          <a href="https://github.com/oeg-upm/rsecon26-codemeta" target="_blank" rel="noopener">Making Research Software FAIR with CodeMeta</a>,
+          donné à RSECon26 par l'Ontology Engineering Group (UPM), sous licence MIT.
         </p>
       </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3><a href="https://fair2adapt-eosc.eu/" target="_blank" rel="noopener">FAIR2ADAPT</a></h3>
-          <p>
-            FAIR2ADAPT transforms data into actionable knowledge for climate adaptation,
-            using FAIR Digital Objects, semantic interoperability and FAIRification
-            approaches in collaboration with EOSC.
-          </p>
-          <p class="small">
-            Horizon Europe · Grant Agreement No. <strong>101188256</strong>
-          </p>
-          <a class="text-link" href="https://fair2adapt-eosc.eu/" target="_blank" rel="noopener">Visit FAIR2ADAPT →</a>
-        </article>
-        <article class="card">
-          <h3><a href="https://www.oscars-project.eu/" target="_blank" rel="noopener">OSCARS</a></h3>
-          <p>
-            OSCARS fosters the uptake of Open Science in Europe by supporting FAIR research
-            data, cross-disciplinary services and Open Science practices across the EOSC
-            Science Clusters.
-          </p>
-          <p class="small">
-            Horizon Europe · Grant Agreement No. <strong>101129751</strong>
-          </p>
-          <a class="text-link" href="https://www.oscars-project.eu/" target="_blank" rel="noopener">Visit OSCARS →</a>
-        </article>
-
-        <article class="card">
-          <h3><a href="https://everse.software/" target="_blank" rel="noopener">EVERSE</a></h3>
-          <p>
-            EVERSE works towards research software excellence by bringing together
-            communities, quality practices, assessment approaches and reusable resources
-            for improving research software across disciplines.
-          </p>
-          <p class="small">
-            Horizon Europe · Grant Agreement No. <strong>101129744</strong>
-          </p>
-          <a class="text-link" href="https://everse.software/" target="_blank" rel="noopener">Visit EVERSE →</a>
-        </article>
-
-        <article class="card">
-          <h3><a href="https://ostrails.eu/" target="_blank" rel="noopener">OSTrails</a></h3>
-          <p>
-            OSTrails develops Open Science Plan-Track-Assess pathways and advances
-            interoperability between Data Management Plans, Scientific Knowledge Graphs
-            and FAIR assessment tools.
-          </p>
-          <p class="small">
-            Horizon Europe · Grant Agreement No. <strong>101130187</strong>
-          </p>
-          <a class="text-link" href="https://ostrails.eu/" target="_blank" rel="noopener">Visit OSTrails →</a>
-        </article>
-      </div>
-
     </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
       <div>
-        <strong>Making Research Software FAIR with CodeMeta</strong>
-        <p>RSECon26 workshop materials.</p>
+        <strong>Citer et préserver des codes et logiciels avec SWHID et CodeMeta</strong>
+        <p>Webinaire du 15 octobre 2026.</p>
       </div>
       <div class="footer-links">
-        <a href="#top">Back to top</a>
-        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top">Haut de page</a>
+        <a href="https://github.com/lindangulopez/citer-preserver-logiciels" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>

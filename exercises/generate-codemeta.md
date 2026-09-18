@@ -32,7 +32,10 @@ You will need:
 - a software repository that you can modify,
 - permission to enable and run GitHub Actions in that repository.
 
-You may use your own repository or a sample repository provided by the workshop organisers.
+You may use your own repository, or your fork of **this repository**, which pairs a plain
+GitHub Pages site with a real QGIS project ([`qgis/`](../qgis/)) as the worked example for
+this exercise. A reference `codemeta.json` for this repository is provided at the repo root —
+use it to compare against what SOMEF generates for your own fork.
 
 > **Note**
 >
@@ -73,7 +76,9 @@ Ask yourself:
 
 ## Step 2 — Generate `codemeta.json` with SOMEF
 
-Copy the GitHub Action template provided by the workshop organisers for **CodeMeta generation with SOMEF**.
+Copy the GitHub Action template provided in this repository at
+[`.github/workflows/generate-codemeta.yml`](../.github/workflows/generate-codemeta.yml) for
+**CodeMeta generation with SOMEF**.
 
 Place the workflow file inside:
 
@@ -143,6 +148,13 @@ Modify the repository metadata or the `codemeta.json` file as appropriate.
 At this point, you should have a first improved version of your CodeMeta metadata.
 
 ---
+
+> **Optional stretch — Steps 4–8**
+>
+> RSFC and RSMetadataCheck workflow templates are not bundled in this repository (their exact
+> package/action names should be confirmed against current tooling before running these
+> steps). If time or tooling doesn't allow it, stop after Step 3 with a working
+> `codemeta.json` — that already covers this webinar's Part 2 objective.
 
 ## Step 4 — Add the RSFC FAIR Assessment GitHub Action
 
