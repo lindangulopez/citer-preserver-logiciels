@@ -9,6 +9,8 @@ Un « fork » n'existe qu'à l'intérieur d'une même plateforme : on ne peut pa
 
 Ce parcours combine les deux : on importe une première fois, puis on pousse les mises à jour depuis sa machine.
 
+Sans compte sur l'instance GitLab, voir [la FAQ](faq.md#fork-sans-compte).
+
 > **Convention.** Le dépôt GitHub reste le dépôt de référence (URL canonique, GitHub Actions, GitHub Pages). La copie GitLab est un miroir secondaire.
 
 Durée : environ 20 minutes. Prérequis : un compte GitHub, un compte sur gitlab.inria.fr, `git` installé.
@@ -79,6 +81,8 @@ Variante automatisée : une étape GitHub Actions qui pousse vers GitLab avec un
   ```text
   Miroir de https://github.com/lindangulopez/citer-preserver-logiciels
   ```
+
+<a id="software-heritage"></a>
 
 ## 5. Lien avec Software Heritage
 
