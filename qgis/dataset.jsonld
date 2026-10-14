@@ -1,0 +1,76 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Greater Côa Valley species monitoring, teaching dataset (2025-2026)",
+  "description": "Data mapped by the QGIS project rewilding_portugal_species_2025.qgs: a 30 km study-area polygon around the Côa river, the Côa river network, species named as present in the Greater Côa Valley in the Rewilding Portugal 2025 annual review, aggregate species counts from the same review, and 41 geocoded species sightings from visitor boards at four sites (Faia Brava; Vale Carapito, Vilar Maior; Ermo das Águias, Vale de Madeira; Ribeira do Mosteiro). Repurposed as a teaching example; not the canonical, maintained copy of these data. The licence of the data is still to confirm.",
+  "creator": {
+    "@type": "Person",
+    "givenName": "Linda",
+    "familyName": "Angulo Lopez"
+  },
+  "dateCreated": "2026-08-22",
+  "dateModified": "2026-09-18",
+  "temporalCoverage": "2025/2026",
+  "inLanguage": ["en", "pt"],
+  "keywords": [
+    "species monitoring",
+    "rewilding",
+    "Greater Côa Valley",
+    "Portugal",
+    "biodiversity",
+    "GeoPackage"
+  ],
+  "isPartOf": "https://github.com/lindangulopez/citer-preserver-logiciels",
+  "isBasedOn": [
+    "Rewilding Portugal, Annual Review 2025 (species and page numbers cited per row in annual_review_2025_species.csv)",
+    "Information panels and tourism websites at the four sites (source cited per row in visitor_board_species_2026.csv)"
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Greater Côa Valley, Portugal",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "40.00 -7.59 41.36 -6.54"
+    }
+  },
+  "variableMeasured": [
+    "common_name",
+    "scientific_name",
+    "taxonomic_group",
+    "status_in_greater_coa_valley",
+    "count_2025",
+    "site",
+    "functional_group",
+    "source_type"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "study_area.gpkg",
+      "description": "GeoPackage: study_area (1 polygon, 30 km buffer, EPSG:3035), coa_river (31 lines, EPSG:4326), coa_catchment_rivers (39 lines, EPSG:4326, not loaded in the project)",
+      "encodingFormat": "application/geopackage+sqlite3",
+      "contentUrl": "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/study_area.gpkg"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "annual_review_2025_species.csv",
+      "description": "7 named species present, with status and report page (non-spatial)",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/annual_review_2025_species.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "annual_review_2025_aggregate_counts.csv",
+      "description": "4 aggregate counts by taxonomic group, not itemised in the report (non-spatial)",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/annual_review_2025_aggregate_counts.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "visitor_board_species_2026.csv",
+      "description": "41 species sightings at four sites, points in x/y (EPSG:4326), with source type (panel, tourism website, colleague confirmed)",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/visitor_board_species_2026.csv"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Rewilding Portugal — Greater Côa Valley species monitoring (teaching example), QGIS project",
+  "description": "QGIS 3.34 project that maps a 30 km study area around the Côa river (Greater Côa Valley, Portugal) with species named in the Rewilding Portugal 2025 annual review and species sightings from visitor boards at four sites. The project file holds the method: layer sources, projection (EPSG:3035, ETRS89-extended / LAEA Europe), symbology and native QGIS metadata. All data paths are relative (../data/), so the project opens after a clone or a fork with no setup. Worked example of the webinar 'Citer et préserver des codes et logiciels avec SWHID et CodeMeta' (15 October 2026).",
+  "codeRepository": "https://github.com/lindangulopez/citer-preserver-logiciels",
+  "isPartOf": "https://github.com/lindangulopez/citer-preserver-logiciels",
+  "license": "https://spdx.org/licenses/MIT",
+  "dateCreated": "2026-08-22",
+  "dateModified": "2026-09-18",
+  "runtimePlatform": "QGIS 3.34 LTR (Prizren)",
+  "softwareRequirements": [
+    "QGIS >= 3.34",
+    "GDAL/OGR with the GeoPackage driver",
+    "QGIS delimited text provider",
+    "Internet access for the OpenStreetMap basemap (optional)"
+  ],
+  "fileFormat": [
+    "application/x-qgis-project (.qgs, XML)",
+    "application/x-qgis-project-zip (.qgz)"
+  ],
+  "hasPart": [
+    "rewilding_portugal_species_2025.qgs",
+    "rewilding_portugal_species_2025.qgz",
+    "rewilding_portugal_species_2025_attachments.zip",
+    "dataset.jsonld"
+  ],
+  "keywords": [
+    "QGIS",
+    "GIS",
+    "rewilding",
+    "species monitoring",
+    "ecological connectivity",
+    "Côa Valley",
+    "Portugal",
+    "CodeMeta",
+    "SWHID"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Linda",
+      "familyName": "Angulo Lopez"
+    }
+  ],
+  "relatedLink": [
+    "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/README.md",
+    "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/qgis/dataset.jsonld"
+  ],
+  "developmentStatus": "https://www.repostatus.org/#inactive",
+  "_comment": "Describes the QGIS project as software: the .qgs file is the processing method (sources, projection, styling). The data it maps is described separately as a schema.org Dataset in dataset.jsonld. This is one of the two answers discussed on slide 14 of the webinar. The licence covers the project file; the licence of the data taken from Rewilding Portugal sources is still to confirm (see README.md)."
+}
