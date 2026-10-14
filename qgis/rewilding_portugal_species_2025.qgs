@@ -262,10 +262,14 @@
           <email></email>
           <role>author</role>
         </contact>
-        <links/>
+        <links>
+          <link description="Licences of the data in this repository" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md" mimeType="" size="" type="WWW:LINK" name="Data licence (data/LICENSE.md)" format=""/>
+        </links>
         <history>Repurposed for teaching from Linda Angulo Lopez's private rewilding-illustration research project (Solo-field-illustrator-project-for-Rewilding-Portugal); file paths were re-pointed into this repository's data/ folder for self-containment.</history>
         <dates/>
         <fees></fees>
+        <rights>© 2026 Linda Angulo Lopez. Compilation of facts from Rewilding Portugal, Annual Review 2025.</rights>
+        <license>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)</license>
         <encoding></encoding>
         <crs>
           <spatialrefsys nativeFormat="Wkt">
@@ -560,15 +564,19 @@
           <email></email>
           <role>author</role>
         </contact>
-        <links/>
+        <links>
+          <link description="Licences of the data in this repository" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md" mimeType="" size="" type="WWW:LINK" name="Data licence (data/LICENSE.md)" format=""/>
+        </links>
         <history>Repurposed for teaching from Linda Angulo Lopez's private rewilding-illustration research project (Solo-field-illustrator-project-for-Rewilding-Portugal); file paths were re-pointed into this repository's data/ folder for self-containment.</history>
         <dates/>
         <fees></fees>
+        <rights>© OpenStreetMap contributors, https://www.openstreetmap.org/copyright. Distributed under the Open Database License 1.0 as part of data/study_area.gpkg.</rights>
+        <license>ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/)</license>
         <encoding></encoding>
         <crs>
           <spatialrefsys nativeFormat="Wkt">
             <wkt></wkt>
-            <proj4></proj4>
+            <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
             <srsid>0</srsid>
             <srid>0</srid>
             <authid></authid>
@@ -1713,15 +1721,19 @@ def my_form_open(dialog, layer, feature):
           <email></email>
           <role>author</role>
         </contact>
-        <links/>
+        <links>
+          <link description="Licences of the data in this repository" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md" mimeType="" size="" type="WWW:LINK" name="Data licence (data/LICENSE.md)" format=""/>
+        </links>
         <history>Repurposed for teaching from Linda Angulo Lopez's private rewilding-illustration research project (Solo-field-illustrator-project-for-Rewilding-Portugal); file paths were re-pointed into this repository's data/ folder for self-containment.</history>
         <dates/>
         <fees></fees>
+        <rights>Study-area polygon © 2026 Linda Angulo Lopez. Distributed under the Open Database License 1.0 as part of data/study_area.gpkg, which contains OpenStreetMap data (© OpenStreetMap contributors).</rights>
+        <license>ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/)</license>
         <encoding></encoding>
         <crs>
           <spatialrefsys nativeFormat="Wkt">
             <wkt></wkt>
-            <proj4></proj4>
+            <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs</proj4>
             <srsid>0</srsid>
             <srid>0</srid>
             <authid></authid>
@@ -2045,10 +2057,14 @@ def my_form_open(dialog, layer, feature):
           <email></email>
           <role>author</role>
         </contact>
-        <links/>
+        <links>
+          <link description="Licences of the data in this repository" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md" mimeType="" size="" type="WWW:LINK" name="Data licence (data/LICENSE.md)" format=""/>
+        </links>
         <history>Repurposed for teaching from Linda Angulo Lopez's private rewilding-illustration research project (Solo-field-illustrator-project-for-Rewilding-Portugal); file paths were re-pointed into this repository's data/ folder for self-containment.</history>
         <dates/>
         <fees></fees>
+        <rights>© 2026 Linda Angulo Lopez. Compilation of facts from Rewilding Portugal, Annual Review 2025 (page cited per row). Cite as: Angulo Lopez, L. (2026), citer-preserver-logiciels, data/annual_review_2025_species.csv.</rights>
+        <license>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)</license>
         <encoding></encoding>
         <crs>
           <spatialrefsys nativeFormat="Wkt">
@@ -2380,10 +2396,14 @@ def my_form_open(dialog, layer, feature):
           <email></email>
           <role>author</role>
         </contact>
-        <links/>
+        <links>
+          <link description="Licences of the data in this repository" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md" mimeType="" size="" type="WWW:LINK" name="Data licence (data/LICENSE.md)" format=""/>
+        </links>
         <history>Repurposed for teaching from Linda Angulo Lopez's private rewilding-illustration research project (Solo-field-illustrator-project-for-Rewilding-Portugal); file paths were re-pointed into this repository's data/ folder for self-containment.</history>
         <dates/>
         <fees></fees>
+        <rights>© 2026 Linda Angulo Lopez. Compilation of species listed on site information panels and tourism websites (source cited per row); geocoding by the author.</rights>
+        <license>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)</license>
         <encoding></encoding>
         <crs>
           <spatialrefsys nativeFormat="Wkt">
@@ -3018,7 +3038,7 @@ def my_form_open(dialog, layer, feature):
         <title>Tuiles OpenStreetMap</title>
         <abstract>OpenStreetMap est construit par une communauté de cartographes qui contribuent et maintiennent des données sur les routes, les sentiers, les cafés, les gares, et bien plus encore, dans le monde entier.</abstract>
         <links>
-          <link description="" name="Source" size="" format="" url="https://www.openstreetmap.org/" type="WWW:LINK" mimeType=""/>
+          <link description="" url="https://www.openstreetmap.org/" mimeType="" size="" type="WWW:LINK" name="Source" format=""/>
         </links>
         <dates/>
         <fees></fees>
@@ -3040,7 +3060,7 @@ def my_form_open(dialog, layer, feature):
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial crs="EPSG:4326" minz="nan" dimensions="2" minx="-180" miny="-85.05112877980660357" maxy="85.05112877980660357" maxz="nan" maxx="180"/>
+          <spatial maxz="nan" maxy="85.05112877980660357" minx="-180" miny="-85.05112877980660357" maxx="180" dimensions="2" crs="EPSG:4326" minz="nan"/>
         </extent>
       </resourceMetadata>
       <provider>wms</provider>
@@ -3314,7 +3334,9 @@ def my_form_open(dialog, layer, feature):
     <language></language>
     <type></type>
     <title>Rewilding Portugal — Greater Côa Valley species monitoring (teaching example)</title>
-    <abstract>QGIS project pairing a 30km Greater Côa Valley study-area boundary with named-site species observations and visitor-board sightings, repurposed as the worked example for the 2026-10-15 webinar 'Citer et préserver des codes et logiciels avec SWHID et CodeMeta'. Original data comes from Linda Angulo Lopez's private rewilding-illustration research project; paths here were re-pointed to data/ so the project is self-contained.</abstract>
+    <abstract>QGIS project pairing a 30km Greater Côa Valley study-area boundary with named-site species observations and visitor-board sightings, repurposed as the worked example for the 2026-10-15 webinar 'Citer et préserver des codes et logiciels avec SWHID et CodeMeta'. Original data comes from Linda Angulo Lopez's private rewilding-illustration research project; paths here were re-pointed to data/ so the project is self-contained.
+
+Licences: project file © 2026 Linda Angulo Lopez, MIT (https://spdx.org/licenses/MIT). CSV tables in data/: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). data/study_area.gpkg: ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/), contains OpenStreetMap data © OpenStreetMap contributors. Basemap © OpenStreetMap contributors. Details in data/LICENSE.md.</abstract>
     <keywords vocabulary="gis-teaching">
       <keyword>rewilding</keyword>
       <keyword>ecological connectivity</keyword>
@@ -3324,7 +3346,10 @@ def my_form_open(dialog, layer, feature):
       <keyword>CodeMeta</keyword>
     </keywords>
     <links>
-      <link description="" name="codemeta.json" size="" format="" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/codemeta.json" type="metadata" mimeType=""/>
+      <link description="" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/codemeta.json" mimeType="" size="" type="metadata" name="codemeta.json" format=""/>
+      <link description="Description of this project (French)" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/qgis/README.md" mimeType="" size="" type="WWW:LINK" name="README.md" format=""/>
+      <link description="schema.org Dataset description of the mapped data" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/qgis/dataset.jsonld" mimeType="" size="" type="metadata" name="dataset.jsonld" format=""/>
+      <link description="Licences of the data in this repository" url="https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md" mimeType="" size="" type="WWW:LINK" name="Data licence (data/LICENSE.md)" format=""/>
     </links>
     <dates>
       <date value="2026-08-22T20:05:54" type="Created"/>

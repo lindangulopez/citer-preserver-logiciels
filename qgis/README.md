@@ -47,8 +47,18 @@ CodeMeta n'a pas de champ pour « un projet SIG livré avec le logiciel ». Le `
 
 - Les données viennent d'un projet de recherche privé d'illustration naturaliste sur la Grande Vallée du Côa. Elles sont reprises ici comme exemple pédagogique et ne sont pas la copie de référence. Voir `../data/README.md`.
 - Les sources sont citées ligne par ligne dans les CSV : pages du rapport annuel 2025 de Rewilding Portugal, panneaux d'information, sites touristiques.
-- La licence MIT du dépôt couvre le projet QGIS. **La licence des données reprises de Rewilding Portugal reste à confirmer** avant toute réutilisation hors de ce dépôt.
-- `data/study_area.gpkg` contient aussi une couche `coa_catchment_rivers` (39 lignes) qui n'est pas chargée dans le projet.
+- `data/study_area.gpkg` contient aussi une couche `coa_catchment_rivers` (39 lignes, HydroRIVERS) qui n'est pas chargée dans le projet.
+
+## Licences
+
+| Quoi | Licence |
+| --- | --- |
+| Le projet QGIS (`.qgs`, `.qgz`) et le code du dépôt | MIT, © 2026 Linda Angulo Lopez |
+| Les tables CSV de `data/` | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © 2026 Linda Angulo Lopez, sources citées ligne par ligne |
+| `data/study_area.gpkg` | [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) : la couche `coa_river` vient d'OpenStreetMap (© les contributeurs d'OpenStreetMap) |
+| Le fond de carte | © les contributeurs d'OpenStreetMap, tuiles distantes |
+
+Les licences sont aussi inscrites dans le projet : onglet Métadonnées de chaque couche (champs « Licence » et « Droits ») et résumé du projet. Détails et attribution : [`../data/LICENSE.md`](../data/LICENSE.md).
 
 ## Citer ce projet
 

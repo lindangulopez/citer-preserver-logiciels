@@ -7,7 +7,7 @@
   "isPartOf": "https://github.com/lindangulopez/citer-preserver-logiciels",
   "license": "https://spdx.org/licenses/MIT",
   "dateCreated": "2026-08-22",
-  "dateModified": "2026-09-18",
+  "dateModified": "2026-10-14",
   "runtimePlatform": "QGIS 3.34 LTR (Prizren)",
   "softwareRequirements": [
     "QGIS >= 3.34",
@@ -45,8 +45,9 @@
   ],
   "relatedLink": [
     "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/README.md",
-    "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/qgis/dataset.jsonld"
+    "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/qgis/dataset.jsonld",
+    "https://github.com/lindangulopez/citer-preserver-logiciels/blob/main/data/LICENSE.md"
   ],
   "developmentStatus": "https://www.repostatus.org/#inactive",
-  "_comment": "Describes the QGIS project as software: the .qgs file is the processing method (sources, projection, styling). The data it maps is described separately as a schema.org Dataset in dataset.jsonld. This is one of the two answers discussed on slide 14 of the webinar. The licence covers the project file; the licence of the data taken from Rewilding Portugal sources is still to confirm (see README.md)."
+  "_comment": "Describes the QGIS project as software: the .qgs file is the processing method (sources, projection, styling). The data it maps is described separately as a schema.org Dataset in dataset.jsonld. This is one of the two answers discussed on slide 14 of the webinar. The MIT licence covers the project file. The data have their own open licences: CSV tables CC BY 4.0, data/study_area.gpkg ODbL 1.0 (contains OpenStreetMap data). See data/LICENSE.md."
 }

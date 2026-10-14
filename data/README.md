@@ -24,6 +24,10 @@ the project opens correctly straight after a fresh `git clone`/fork, with no oth
 Two other layers in the project need no local data: the OpenStreetMap basemap (remote XYZ
 tiles) and "Carte du monde" (QGIS's own bundled `inbuilt:/data/world_map.gpkg` sample data).
 
+## Licences
+
+The CSV tables are under **CC BY 4.0** (© 2026 Linda Angulo Lopez, sources cited per row). `study_area.gpkg` is under **ODbL 1.0**, because its `coa_river` layer comes from OpenStreetMap (© OpenStreetMap contributors); its `coa_catchment_rivers` layer comes from HydroRIVERS (Lehner & Grill, 2013). Details and how to attribute: [`LICENSE.md`](LICENSE.md). The QGIS project and the code are under MIT (`../LICENSE`).
+
 ## QGIS version
 
 The project was authored and re-pointed with **QGIS 3.34 (LTR, "Prizren")**. Any recent QGIS
